@@ -26,7 +26,6 @@ def getImagesAndLabels(path):
 print ("\n [INFO] Training faces. It will take a few seconds. Wait ...")
 faces,ids, names = getImagesAndLabels(path)
 recognizer.train(faces, np.array(ids))
-recognizer.train(faces, np.array(names))
 # Save the model into trainer/trainer.yml
 recognizer.write('trainer/trainer.yml') # recognizer.save() worked on Mac, but not on Pi
 # Print the numer of faces trained and end program
